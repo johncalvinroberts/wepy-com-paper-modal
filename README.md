@@ -18,12 +18,12 @@ For example, on a page `index.wpy`
 // index.wpy
 <template>
     <modal>
-		// Slot, put your WXML content of modal here
+    // Slot, put your WXML content of modal here
     </modal>
 </template>
 <script>
     import wepy from 'wepy'
-    import Toast from 'wepy-com-paper-modal'
+    import Modal from 'wepy-com-paper-modal'
 
     export default class Index extends wepy.page {
         components = {
