@@ -64,8 +64,8 @@
   .modal--body .icon-close {
     position: absolute;
     padding: 5rpx;
-    top: 20rpx;
-    right: 20rpx;
+    top:10rpx;
+    right:10rpx;
     width: 40rpx;
     height: 40rpx;
   }
