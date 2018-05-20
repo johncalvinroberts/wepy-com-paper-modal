@@ -1,4 +1,22 @@
 <style lang="css">
+  @font-face {
+      font-family: 'icomoon';
+      src: url(data:application/font-woff2;charset=utf-8;base64,d09GMgABAAAAAAIwAA0AAAAABeAAAAHcAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0ZGVE0cGh4GYACCXhEICnh2Cw4AATYCJAMYBCAFgxsHRRvnBMguCmNj1uST/YStUXRIxeg9f/NLPM+33//2mZkn/hPi8afvEUtW8WbW8Uo3D5mQCdkrlUVkka///zfvO5F8yxZ2PIz+4tVe5mEJPMRcJ6kZTN4/dZP/K+0SGZO6TCJaFOhj4mNhgGnnAXa+xvkmDDjMNeFA3DbO8zF4DE8GMaQnBa1GFyHw4zOEX+GdO7Y1YYptKCJ6oqGg1rP0TI/yvoynFOevzYyYliwpPYr+qF86jlZRgYD8gKCevEfABYFgj+YgxoaKIg780d11IN6ka3tPFWMAUUmfVCAFhXyZ0HBZpOssQB9M0bANy4AGCCJSIWe5+Vj5SpRe1qWuasA98m/bZ8/obqgtnTotuVEfLAAI8Hvov7g4+H84aZI3Cp3aVRgqINLy3xqonQAA+g2QswAUNAj6ZgIKAADmPguIgSUBxcCygGrgKALNwAUEeiYeINA38ErA2C5fUaWNxJwAhdgBKrEGGnGC7tnmEt0396T32JZPbnNmo9lsgttX5wVRDZxSqp0GxgYPyNJgNGFPeU5ps2vdzLoVaxwtGddX1ubWOWY2OTA3lSaljXEoecwVL+YkRIEi7rOhnRadvDp/vTAHRWnfJ0VJVdP6N4d3adLB3alNsJqTZ2trAAA=) format('woff2'),
+          url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAPoAA0AAAAABeAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAADzAAAABoAAAAcg/L73UdERUYAAAOwAAAAHAAAAB4AJwAMT1MvMgAAAZQAAAA+AAAAYA8TBYBjbWFwAAAB6AAAAFIAAAFeF1fZ4Gdhc3AAAAOoAAAACAAAAAgAAAAQZ2x5ZgAAAkwAAABPAAAAeEJUh0loZWFkAAABMAAAACwAAAA2EWwZUmhoZWEAAAFcAAAAHQAAACQHwQPHaG10eAAAAdQAAAAUAAAAGAtVAABsb2NhAAACPAAAAA4AAAAOAFQAIG1heHAAAAF8AAAAGAAAACAACAAPbmFtZQAAApwAAADcAAABm/pYTdhwb3N0AAADeAAAAC0AAABF1A7LEHjaY2BkAIMPOQ5X4vltvjJws4D519WzshD0/4PM/5kPALkcDEwgUQA7QQtTeNpjYGRgYD7w/wADAwsDCDD/Z2BkQAVsAF8xA5EAAAB42mNgZGBgYGPgZQDRDAxMDGgAAAJfABh42mNgZg5lnMDAysDANJPpDAMDQz+EZnzNYMzIyYAKGAXQBBgcGBhfMjAf+H+AwYEZiEFqkGQVGBgBOUEKngAAeNpjYYAAxlAIzQTELEAMAAWjAGF42mNgYGBmgGAZBkYGEIgA8hjBfBYGGyDNxcDBwASEjAwKLxn+//3/H6wKzv7/RJwVrIOLAQYYQeYxsgExM1SACUgwMaACoB0sDMMbAAAjgA0fAAAAAAAAAAgACAAQABgAPAAAeNqNiMEJgDAQBHdzDznwrSVYgthHkiLXFKGNXQyCf+cxMAPiIwFHwo/ut3W7MAPcnJNzde5O6wrFKZZXrIrGbMt4LEMhMUcTKwseeNMbVQB42nXOsWrCUBjF8X80WrQgnUrpdEenoOADdCp1cOkgHRvjJQT0XogRdO8jdOwz9GF8Ik/CtyZww+87N+cjwIx/Eton4YEn80Cem4fymzmVv8wjHrmYx8p/zVNeuamVpBMls25D64H8Yh7KC3Mqf5hHPPNtHiv/MU9Z8UdFQeSoEwlQFfEYo/CJp+TMgZxaoy/Ph1zo+74v32pPzUn3be5Ykukv2fr6VMXgltmiv/vezY1apbaEblOu2bNXtuOq97rrbqybqRRD40offJ03fu92V7cu4kb7Mu7l2z5DeNpjYGLAD9gYGBiZGJgYmRmYGVnY0nMqCzIM2UvzMg0MDMC0q6WBAQBW9wa6AAAAAAEAAf//AA942mNgZGBg4AFiMSBmYmAEQlYgZgHzGAAD1QA0eNpjYGBgZACCq0vUOUD0dfWsLBgNADj5BU4AAA==) format('woff');
+      font-weight: normal;
+      font-style: normal;
+  }
+
+  .icon-close:before {
+    content: "\e900";
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;  
+  }
+
   .modal--mask {
     position: fixed;
     top: 0;
@@ -13,6 +31,7 @@
     align-items: center;
     justify-content: space-between;
   }
+
   .modal--body {
     transition: transform 0.3s ease;
     padding: 30rpx;
@@ -42,7 +61,7 @@
     box-sizing: border-box;
     padding: 15rpx 0;
   }
-  .modal--close {
+  .modal--body .icon-close {
     position: absolute;
     padding: 5rpx;
     top: 20rpx;
@@ -50,12 +69,17 @@
     width: 40rpx;
     height: 40rpx;
   }
+  .close--default {
+    color: #000000;
+    font-size: 18px;
+  }
 </style>
 <template>
   <view class="modal--blur" style="visibility: {{open ? 'visible' : 'hidden'}};">
     <view class="container__flex modal--mask" @tap="maskTap" id="modalmask">
       <view class="modal--body" style="transform: {{open ? 'translate3d(0, 0, 0)' : 'translate3d(0, -100%, 0)'}}; margin-top:{{topOffset}};">
-        <image class="modal--close" src="../icons/close.svg" @tap="maskTap"></image>
+        <!-- <image class="modal--close" src="../icons/close.svg" @tap="maskTap"></image> -->
+        <view class="icon-close {{closeClass}}" @tap="maskTap"></view>
         <view class="modal--title" wx:if="{{title}}">{{title}}</view>
         <view class="modal--subtitle" wx:if="{{subtitle}}">{{subtitle}}</view>
         <view class="modal--slot-outer">
@@ -79,6 +103,10 @@
       },
       subTitle: {
         type: String
+      },
+      closeClass: {
+        type: String,
+        default: 'close--default'
       }
     }
 
