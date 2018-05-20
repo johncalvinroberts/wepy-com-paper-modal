@@ -1,0 +1,100 @@
+<style lang="css">
+  .modal--mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0, 0.5);
+    box-sizing: border-box;
+    padding: 40rpx;
+    z-index: 199;
+  }
+  .modal--body {
+    transition: transform 0.3s ease;
+    padding: 30rpx;
+    background-color: #ffffff;
+    position:relative;
+    border-radius: 4rpx;
+    box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    z-index:200;
+  }
+  .modal--title {
+    font-size: 40rpx;
+    color: #000000;
+    text-align: center;
+    font-weight: 500;
+    padding-bottom:10rpx;
+  }
+  .modal--subtitle {
+    padding-bottom:10rpx;
+    text-align: center;
+    font-size: 14rpx;
+  }
+  .modal--slot-outer {
+    padding: 15rpx 0;
+  }
+  .modal--close {
+    position: absolute;
+    padding: 5rpx;
+    top: 20rpx;
+    right: 20rpx;
+    width: 40rpx;
+    height: 40rpx;
+  }
+</style>
+<template>
+  <view class="modal--blur" style="visibility: {{open ? 'visible' : 'hidden'}};">
+    <view class="container__flex modal--mask" @tap="maskTap" id="modalmask">
+      <view class="modal--body" style="transform: {{open ? 'translate3d(0, 0, 0)' : 'translate3d(0, -100%, 0)'}}; margin-top:{{topOffset}};">
+        <!-- <image class="modal--close" src="../icons/close.svg" @tap="maskTap"></image> -->
+        <view class="modal--title" wx:if="{{title}}">{{title}}</view>
+        <view class="modal--subtitle" wx:if="{{subtitle}}">{{subtitle}}</view>
+        <view class="modal--slot-outer">
+          <slot>
+          </slot>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+<script>
+  import wepy from 'wepy'
+
+  export default class Modal extends wepy.component {
+    props = {
+      open: {
+        type: Boolean
+      },
+      title: {
+        type: String
+      },
+      subTitle: {
+        type: String
+      }
+    }
+
+    methods = {
+      maskTap (e) {
+        if (e.target.id === e.currentTarget.id) {
+          this.open = false
+          this.$apply()
+        }
+      },
+      toggle () {
+        this.open = !this.open
+        this.$apply()
+      }
+    }
+
+    data = {}
+
+    components = {}
+
+    onLoad () {}
+    onShow () {}
+  }
+</script>
