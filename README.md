@@ -1,5 +1,6 @@
 # wepy-com-paper-modal
-A handsome modal component for use in the [wepyjs](https://github.com/wepyjs/wepy), a Vue-like framework for building WeChat mini programs.
+
+A handsome modal component for use in [wepyjs](https://github.com/wepyjs/wepy), a Vue-like framework for building WeChat mini programs.
 
 ## What it looks like
 ![modal](https://user-images.githubusercontent.com/11850362/40283133-1e82f29c-5cac-11e8-89b2-1010003807e1.gif)
